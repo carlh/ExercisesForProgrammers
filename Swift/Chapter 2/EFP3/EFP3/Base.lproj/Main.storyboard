@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EFP3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What did they say?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-en-8tF" userLabel="Quote Prompt">
+                                <rect key="frame" x="227" y="91" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who said it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xb-nr-t91" userLabel="Author Prompt">
+                                <rect key="frame" x="253" y="28" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-M0-FGD" userLabel="Quote TextField">
+                                <rect key="frame" x="20" y="120" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="6iU-eJ-Mp4"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-hl-mU2" userLabel="Author TextField">
+                                <rect key="frame" x="20" y="53" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Sza-1L-8F0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGZ-7D-oOK" userLabel="Quotation">
+                                <rect key="frame" x="20" y="168" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oP7-M0-FGD" firstAttribute="top" secondItem="rKl-en-8tF" secondAttribute="bottom" constant="8" id="3tw-uR-ETm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="oP7-M0-FGD" secondAttribute="leading" id="64g-nF-9KO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uwk-hl-mU2" secondAttribute="trailing" id="7Ej-wW-me7"/>
+                            <constraint firstItem="7xb-nr-t91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="850-0V-Neb"/>
+                            <constraint firstItem="rKl-en-8tF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E55-dm-9Lo"/>
+                            <constraint firstItem="rKl-en-8tF" firstAttribute="top" secondItem="Uwk-hl-mU2" secondAttribute="bottom" constant="8" id="GVn-hL-SHc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Uwk-hl-mU2" secondAttribute="leading" id="HWp-Ia-XAo"/>
+                            <constraint firstItem="qGZ-7D-oOK" firstAttribute="top" secondItem="oP7-M0-FGD" secondAttribute="bottom" constant="18" id="It4-AE-fN3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qGZ-7D-oOK" secondAttribute="trailing" id="dg9-nO-gVE"/>
+                            <constraint firstItem="Uwk-hl-mU2" firstAttribute="top" secondItem="7xb-nr-t91" secondAttribute="bottom" constant="4" id="fxA-49-21a"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qGZ-7D-oOK" secondAttribute="leading" id="lEn-FN-tui"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oP7-M0-FGD" secondAttribute="trailing" id="sm2-Ii-KC3"/>
+                            <constraint firstItem="7xb-nr-t91" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zD4-fk-5cP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorInput" destination="Uwk-hl-mU2" id="wbf-yD-kLz"/>
+                        <outlet property="outputLabel" destination="qGZ-7D-oOK" id="2rW-cK-FBv"/>
+                        <outlet property="quoteInput" destination="oP7-M0-FGD" id="qZK-Q3-gnS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="252"/>
+        </scene>
+    </scenes>
+</document>
