@@ -24,6 +24,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-Ya-qHq" userLabel="Width Prompt">
+                                <rect key="frame" x="20" y="69" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imperial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soo-Ur-iNT" userLabel="Imperial Area">
                                 <rect key="frame" x="519" y="104" width="61" height="21"/>
                                 <constraints>
@@ -52,16 +58,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaP-Ya-qHq" userLabel="Width Prompt">
-                                <rect key="frame" x="20" y="69" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBm-dp-RBc">
+                                <rect key="frame" x="82" y="133" width="107" height="30"/>
+                                <state key="normal" title="Calculate Areas"/>
+                                <connections>
+                                    <action selector="calculateArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yS-4d-ECC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="SaP-Ya-qHq" secondAttribute="leading" id="1E7-7g-UrI"/>
+                            <constraint firstItem="XBm-dp-RBc" firstAttribute="leading" secondItem="3DQ-N3-Co5" secondAttribute="leading" id="4iw-7h-C7n"/>
+                            <constraint firstItem="XBm-dp-RBc" firstAttribute="top" secondItem="3DQ-N3-Co5" secondAttribute="bottom" constant="8" id="4kD-1Y-gMG"/>
                             <constraint firstItem="h81-MI-qlr" firstAttribute="top" secondItem="7G5-fU-rSi" secondAttribute="bottom" constant="8" id="Blt-0X-5gZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h81-MI-qlr" secondAttribute="trailing" id="DX2-TU-61J"/>
                             <constraint firstItem="SaP-Ya-qHq" firstAttribute="top" secondItem="BRR-Wr-dpC" secondAttribute="bottom" constant="17" id="KaR-dV-cSt"/>
@@ -85,6 +94,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="areaImperial" destination="soo-Ur-iNT" id="H5d-x5-ufC"/>
+                        <outlet property="areaMetric" destination="3DQ-N3-Co5" id="Bde-O3-9pL"/>
+                        <outlet property="lengthField" destination="7G5-fU-rSi" id="cjn-9e-Ot7"/>
+                        <outlet property="widthField" destination="h81-MI-qlr" id="PGD-V3-0Dj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
